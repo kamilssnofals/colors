@@ -72,10 +72,9 @@ const setTextColor = (text, color) => {
 }
 
 function updateColorsHash(colors = []) {
-  document.location.hash = colors.map((col) => {
-    return col.toString().substring(1)
-  })
-  .join('-')
+  [].map.call(document.location.hash = colors, function(col) {
+    return col.toString().substring(1) })
+    .join('-')
 }
 
   function getColorsFromHash() {
